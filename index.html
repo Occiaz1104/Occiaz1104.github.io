@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osaigbovo Onaiwu-Nzegwu | GIS & Remote Sensing Portfolio</title>
+<meta name="description" content="GIS analyst, cartographer and remote sensing specialist in Abuja, Nigeria. Maps, land cover classification, flood mapping, health access analysis and Earth Engine workflows.">
+<meta property="og:title" content="Osaigbovo Onaiwu-Nzegwu | GIS & Remote Sensing Portfolio">
+<meta property="og:description" content="Maps and geospatial analysis: land cover, flood mapping, health access, NDVI time series, drone mapping.">
+<meta property="og:image" content="https://occiaz1104.github.io/assets/img/abuja-lulc-thumb.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14211f; --muted:#56635f; --line:#dfe5e2; --bg:#f7f8f5; --card:#ffffff;
+  --accent:#1f6f5c; --accent-2:#c8812f; --accent-soft:#e3efe9; --dark:#0f1a18;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(247,248,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .brand{font-family:Fraunces,serif;font-weight:700;font-size:18px;text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav ul a:hover{color:var(--accent)}
+@media(max-width:720px){nav ul{display:none}}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.4fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1}}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:Fraunces,serif;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.01em}
+h2{font-family:Fraunces,serif;font-size:clamp(28px,3.4vw,38px);margin:0 0 10px;letter-spacing:-.01em}
+h3{font-size:19px;margin:0 0 6px}
+.lead{font-size:18px;color:var(--muted);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.07)}
+.hero-art{position:relative}
+.hero-art .map{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(15,26,24,.18);transform:rotate(1.5deg)}
+.hero-art .face{position:absolute;left:-18px;bottom:-22px;width:116px;height:116px;border-radius:50%;border:5px solid var(--bg);object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:34px}
+.stats div{font-size:14px;color:var(--muted)}
+.stats b{display:block;font-family:Fraunces,serif;font-size:28px;color:var(--ink)}
+section{padding:64px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.section-head p{color:var(--muted);margin:0;max-width:560px}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.service{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.alt .service{background:var(--bg)}
+.service .ic{width:38px;height:38px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:12px;color:var(--accent);font-weight:700}
+.service p{margin:0;color:var(--muted);font-size:15px}
+.case{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:center;padding:34px 0;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0}
+.case.flip .case-img{order:2}
+@media(max-width:860px){.case{grid-template-columns:1fr}.case.flip .case-img{order:0}}
+.case-img{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+.case-img img{width:100%;max-height:440px;object-fit:contain;background:#fff}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:999px;margin:0 6px 6px 0}
+.case p{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.kpis div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--muted)}
+.kpis b{display:block;font-size:20px;color:var(--ink);font-family:Fraunces,serif}
+.links a{margin-right:16px;font-weight:600;font-size:15px;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.map-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.map-card img{aspect-ratio:1.41;object-fit:cover;cursor:zoom-in;background:#eee}
+.map-card .body{padding:18px}
+.map-card p{color:var(--muted);font-size:15px;margin:6px 0 0}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:14px}
+details p,details li{font-size:14px;color:var(--muted)}
+details ul{padding-left:18px;margin:8px 0 0}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+.about{display:grid;grid-template-columns:.8fr 1.6fr;gap:40px;align-items:start}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about img{border-radius:16px}
+.about p{color:var(--muted)}
+.contact{background:var(--dark);color:#e8efec;border-radius:22px;padding:48px;text-align:center}
+.contact h2{color:#fff}
+.contact p{color:#b9c7c2;max-width:560px;margin:0 auto 22px}
+.contact .btn.ghost{color:#fff;border-color:#fff}
+.contact .btn.primary{background:var(--accent-2);border-color:var(--accent-2)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:13px;text-align:center}
+#lb{position:fixed;inset:0;background:rgba(10,16,15,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-height:94vh;max-width:96vw;border-radius:6px;background:#fff}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top">Osaigbovo Onaiwu-Nzegwu</a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#maps">Map gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="eyebrow">GIS · Remote Sensing · Cartography</div>
+    <h1>Turning satellite, drone and field data into maps people can act on.</h1>
+    <p class="lead">I'm Osaigbovo (Osas), a GIS analyst and cartographer based in Abuja, Nigeria. I build land cover maps, flood and risk maps, health access analyses and publication-ready maps for researchers, NGOs and businesses.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Hire me for a project</a>
+      <a class="btn ghost" href="#projects">See my work</a>
+    </div>
+    <div class="stats">
+      <div><b>10+</b>finished maps &amp; analyses</div>
+      <div><b>4</b>Python / Earth Engine case studies</div>
+      <div><b>85%</b>land cover accuracy (Benin City)</div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="map"><img src="assets/img/abuja-lulc-thumb.jpg" alt="Land cover map of the Federal Capital Territory, Abuja"></div>
+    <img class="face" src="assets/img/osas.jpg" alt="Osaigbovo Onaiwu-Nzegwu">
+  </div>
+</div></header>
+
+<section class="alt" id="services"><div class="wrap">
+  <div class="section-head">
+    <div><div class="eyebrow">What I can do for you</div><h2>Services</h2></div>
+    <p>Clear deliverables: high-resolution maps (PNG/PDF), GIS data (shapefile, GeoTIFF), and a short methods write-up you can drop into a report or thesis.</p>
+  </div>
+  <div class="services">
+    <div class="service"><div class="ic">1</div><h3>Thesis &amp; study area maps</h3><p>Location maps, insets, coordinate grids and proper legends that meet university and journal standards.</p></div>
+    <div class="service"><div class="ic">2</div><h3>Land use / land cover</h3><p>Supervised and machine-learning classification of Sentinel-2 and Landsat imagery, with accuracy assessment and area statistics.</p></div>
+    <div class="service"><div class="ic">3</div><h3>Flood &amp; environmental risk</h3><p>Sentinel-1 radar flood mapping, NDVI/NDWI index maps, buffer and proximity risk analysis.</p></div>
+    <div class="service"><div class="ic">4</div><h3>Health &amp; access analysis</h3><p>Facility coverage, distance-to-service and LGA-level summaries, drawing on my health data management background.</p></div>
+    <div class="service"><div class="ic">5</div><h3>Drone mapping</h3><p>Orthomosaics from drone imagery and digitising of buildings, roads and land features.</p></div>
+    <div class="service"><div class="ic">6</div><h3>Python &amp; Earth Engine workflows</h3><p>Reproducible notebooks for time series, classification and data cleaning that you can rerun on new areas.</p></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="section-head">
+    <div><div class="eyebrow">Case studies</div><h2>Analysis projects</h2></div>
+    <p>Full workflows in Python and Google Earth Engine, each with a written case study, the notebook and an honest note on limitations.</p>
+  </div>
+
+  <article class="case">
+    <div class="case-img"><img src="assets/img/yenagoa-flood-thumb.jpg" data-full="assets/img/yenagoa-flood.jpg" alt="2022 Yenagoa flood map"></div>
+    <div>
+      <span class="tag">Sentinel-1 SAR</span><span class="tag">Deep learning (U-Net)</span><span class="tag">Bayelsa</span>
+      <h3>Mapping the 2022 Yenagoa flood with radar and a U-Net</h3>
+      <p>Flood extent around Yenagoa (Oct to Nov 2022) from Sentinel-1 VV/VH using a fine-tuned U-Net and change detection, compared against a simple radar threshold, then checked against JRC surface water and WorldPop population.</p>
+      <div class="kpis"><div><b>0.95</b>F1 score (U-Net)</div><div><b>0.83</b>IoU vs JRC water</div><div><b>~1,675</b>people in mapped flood water</div></div>
+      <p>The write-up explains honestly why the map misses flooding in built-up areas (radar double bounce, water under canopy, image timing).</p>
+      <div class="links"><a href="projects/04_Yenagoa_Flood_Mapping/Case_Study_Yenagoa_Flood_Mapping.pdf">Read the case study →</a><a href="https://nbviewer.org/github/Occiaz1104/Occiaz1104.github.io/blob/main/projects/04_Yenagoa_Flood_Mapping/yenagoa_flood_mapping.ipynb">View notebook</a></div>
+    </div>
+  </article>
+
+  <article class="case flip">
+    <div class="case-img"><img src="assets/img/benin-lulc-thumb.jpg" data-full="assets/img/benin-lulc.jpg" alt="Benin City land cover map"></div>
+    <div>
+      <span class="tag">Sentinel-2</span><span class="tag">Random Forest · SVM</span><span class="tag">Edo</span>
+      <h3>Land cover of Benin City with machine learning</h3>
+      <p>Five-class land cover map comparing Random Forest and SVM, with spatial cross-validation and a documented check of training labels. I found that 41 of 100 ESA WorldCover labels I checked were wrong, and corrected them before training.</p>
+      <div class="kpis"><div><b>0.85</b>overall accuracy (SVM)</div><div><b>0.80</b>Kappa</div><div><b>46.9%</b>built-up area</div></div>
+      <div class="links"><a href="projects/03_BeninCity_Land_Cover/Case_Study_BeninCity_Land_Cover.pdf">Read the case study →</a><a href="https://nbviewer.org/github/Occiaz1104/Occiaz1104.github.io/blob/main/projects/03_BeninCity_Land_Cover/benin_city_land_cover.ipynb">View notebook</a></div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case-img"><img src="assets/img/bayelsa-health-thumb.jpg" data-full="assets/img/bayelsa-health.jpg" alt="Bayelsa health facility access by LGA"></div>
+    <div>
+      <span class="tag">OpenStreetMap</span><span class="tag">Public health</span><span class="tag">Bayelsa</span>
+      <h3>Health facility access and data gaps in Bayelsa State</h3>
+      <p>How many hospitals and clinics are within 5 km of a major road, and how this differs across the eight LGAs. The state average hides a sharp divide: outside Yenagoa, every mapped facility is more than 5 km from a major road, and three LGAs have no facility in OpenStreetMap at all.</p>
+      <div class="kpis"><div><b>31</b>facilities mapped</div><div><b>77%</b>within 5 km of a road</div><div><b>3 of 8</b>LGAs with no data</div></div>
+      <div class="links"><a href="projects/01_Bayelsa_Health_Access/Case_Study_Bayelsa_Health_Facility_Access.pdf">Read the case study →</a><a href="https://nbviewer.org/github/Occiaz1104/Occiaz1104.github.io/blob/main/projects/01_Bayelsa_Health_Access/bayelsa_health_facility_access.ipynb">View notebook</a></div>
+    </div>
+  </article>
+
+  <article class="case flip">
+    <div class="case-img"><img src="assets/img/kano-ndvi-thumb.jpg" data-full="assets/img/kano-ndvi.jpg" alt="NDVI time series Kano"></div>
+    <div>
+      <span class="tag">Google Earth Engine</span><span class="tag">NDVI</span><span class="tag">Kano</span>
+      <h3>A reusable NDVI time series tool: farmland vs city</h3>
+      <p>One Python function that turns the Sentinel-2 archive into a clean, cloud-masked monthly NDVI curve for any area. Applied to Kadawa irrigated farmland and Kano city, it picks out the October crop peak and the dry-season irrigation peak in February to March.</p>
+      <div class="kpis"><div><b>0.66</b>peak NDVI, farmland</div><div><b>0.39</b>seasonal swing</div><div><b>0.06</b>swing in the city</div></div>
+      <div class="links"><a href="projects/02_Kano_NDVI_Time_Series/Case_Study_Kano_NDVI_Time_Series.pdf">Read the case study →</a><a href="https://nbviewer.org/github/Occiaz1104/Occiaz1104.github.io/blob/main/projects/02_Kano_NDVI_Time_Series/kano_ndvi_time_series.ipynb">View notebook</a></div>
+    </div>
+  </article>
+</div></section>
+
+<section class="alt" id="maps"><div class="wrap">
+  <div class="section-head">
+    <div><div class="eyebrow">Cartography</div><h2>Map gallery</h2></div>
+    <p>Click any map to view it full size. Open "What this map shows" for a short report on each.</p>
+  </div>
+  <div class="gallery">
+
+    <div class="map-card">
+      <img src="assets/img/abuja-lulc-thumb.jpg" data-full="assets/img/abuja-lulc.jpg" alt="Abuja FCT land use land cover map">
+      <div class="body"><h3>Land use / land cover of the FCT, Abuja</h3>
+        <p>Supervised classification of Sentinel-2 imagery (6 January 2026) into five classes.</p>
+        <details><summary>What this map shows</summary>
+          <p>Vegetation is still the largest cover in the territory (39.6%), followed by agricultural land (25.9%) and bare surface (19.5%). Built-up land (14.4%) is concentrated in the Abuja city area in the north-east and along the main growth corridors to the south-west.</p>
+          <ul><li>Method: supervised classification, clipped to the FCT boundary, areas from classified pixels</li><li>Projection: WGS 1984 / UTM Zone 32N</li><li>Edge artefacts outside the image are shown as "no data", not as a land cover class</li></ul>
+        </details></div>
+    </div>
+
+    <div class="map-card">
+      <img src="assets/img/nasrda-drone-thumb.jpg" data-full="assets/img/nasrda-drone.jpg" alt="NASRDA campus drone map">
+      <div class="body"><h3>NASRDA campus drone mapping</h3>
+        <p>Orthomosaic from drone imagery with digitised buildings, roads, trees and vehicles, at 1:800.</p>
+        <details><summary>What this map shows</summary>
+          <p>A high-resolution base map of part of the NASRDA campus, Abuja. Drone photos were stitched into an orthomosaic in Agisoft Metashape, then buildings, roads, trees and parked cars were digitised in ArcGIS Pro. This kind of map supports facility management, campus planning and asset inventories.</p>
+          <ul><li>Software: Agisoft Metashape, ArcGIS Pro</li><li>Scale: 1:800, metre scale bar</li></ul>
+        </details></div>
+    </div>
+
+    <div class="map-card">
+      <img src="assets/img/kogi-forest-thumb.jpg" data-full="assets/img/kogi-forest.jpg" alt="Kogi settlements near forest reserves">
+      <div class="body"><h3>Kogi State: settlements within 10 km of forest reserves</h3>
+        <p>Buffer and overlay analysis to flag communities close to forest reserves.</p>
+        <details><summary>What this map shows</summary>
+          <p>Forest reserves can serve as hideouts for armed groups, so communities close to them may face higher security risk. A 10 km buffer was drawn around each forest reserve and settlements inside it were selected and highlighted (red) against all other settlements, with LGA boundaries for context.</p>
+          <ul><li>Method: buffer, select by location</li><li>Projection: Minna / UTM Zone 32N</li></ul>
+        </details></div>
+    </div>
+
+    <div class="map-card">
+      <img src="assets/img/kogi-insurgency-thumb.jpg" data-full="assets/img/kogi-insurgency.jpg" alt="Kogi settlements near insurgent attacks">
+      <div class="body"><h3>Kogi State: settlements within 10 km of insurgent attacks</h3>
+        <p>Conflict event data (ACLED) buffered to show which communities lie near past attacks.</p>
+        <details><summary>What this map shows</summary>
+          <p>Each recorded attack location from the ACLED database was buffered by 10 km. Settlements falling inside these zones are shown as impacted. The overlapping buffers cover large parts of the state, giving planners and responders a first view of which communities are most exposed.</p>
+          <ul><li>Data: ACLED conflict events, Kogi settlements and LGAs</li><li>Method: buffer, spatial selection</li></ul>
+        </details></div>
+    </div>
+
+    <div class="map-card">
+      <img src="assets/img/nigeria-transport-thumb.jpg" data-full="assets/img/nigeria-transport.jpg" alt="Nigeria transport infrastructure map">
+      <div class="body"><h3>Nigeria: transport infrastructure and places of worship</h3>
+        <p>National reference map of airports, federal highways, railways and places of worship.</p>
+        <details><summary>What this map shows</summary>
+          <p>The federal highway and rail networks connect the main cities, with airports spread across most states. Places of worship are mapped as community facilities that matter for planning and security. State boundaries and Lake Chad give orientation.</p>
+          <ul><li>Coordinate system: WGS 1984, degree graticule</li><li>Software: ArcGIS Pro</li></ul>
+        </details></div>
+    </div>
+
+    <div class="map-card">
+      <img src="assets/img/nasrda-poi-thumb.jpg" data-full="assets/img/nasrda-poi.jpg" alt="NASRDA points of interest GPS map">
+      <div class="body"><h3>NASRDA campus points of interest (GPS survey)</h3>
+        <p>Field-collected GPS points mapped over satellite imagery in QGIS.</p>
+        <details><summary>What this map shows</summary>
+          <p>Landmarks on the NASRDA campus, including the planetarium and the traffic circle, were recorded with a GPS receiver in the field and mapped over a satellite basemap. It shows a full workflow from field data collection to a clean, labelled map.</p>
+          <ul><li>Software: QGIS</li><li>Data: own field GPS survey</li></ul>
+        </details></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">Toolkit</div><h2>Skills &amp; tools</h2></div></div>
+  <div class="skills">
+    <span>ArcGIS Pro</span><span>QGIS</span><span>Google Earth Engine</span><span>Python (GeoPandas, Rasterio)</span><span>Jupyter / Colab</span><span>Agisoft Metashape</span><span>Sentinel-1 &amp; Sentinel-2</span><span>Landsat</span><span>Image classification (RF, SVM)</span><span>Deep learning (U-Net)</span><span>Spatial analysis</span><span>Cartography</span><span>GPS field survey</span><span>Excel &amp; Power BI</span><span>Health data management</span>
+  </div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap about">
+  <img src="assets/img/osas.jpg" alt="Osaigbovo Onaiwu-Nzegwu">
+  <div>
+    <div class="eyebrow">About me</div>
+    <h2>Osaigbovo (Osas) Onaiwu-Nzegwu</h2>
+    <p>I'm completing an MSc in Geoinformatics and GIS Applications at the Institute of Space Science and Engineering, African University of Science and Technology (AUST), Abuja. My thesis compares AHP and machine-learning models of flood-associated malaria risk in South-South Nigeria.</p>
+    <p>Before GIS, I worked across health data management, pharmacovigilance, telecom network analytics and research, and I hold a BSc in Environmental Management from Nnamdi Azikiwe University. That mix means I care about two things in every map: that the data is right, and that the person reading it can make a decision from it.</p>
+    <p>I'm open to GIS analyst roles, research collaborations and freelance mapping projects, remote or in Nigeria.</p>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2>Have a mapping or analysis project?</h2>
+    <p>Tell me about your area, your data and your deadline. I usually reply within 24 hours.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="mailto:oonzegwu@gmail.com?subject=GIS%20project%20enquiry">Email me</a>
+      <a class="btn ghost" href="https://www.fiverr.com/oonzegwu">Hire me on Fiverr</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/osaigbovoonaiwu-nzegwu/">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Occiaz1104">GitHub</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>© 2026 Osaigbovo Onaiwu-Nzegwu · Maps and figures CC BY 4.0 · Third-party data remain under their own licences (see each case study).</footer>
+
+<div id="lb"><img alt=""></div>
+<script>
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('img[data-full]').forEach(i=>i.addEventListener('click',()=>{li.src=i.dataset.full;li.alt=i.alt;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
